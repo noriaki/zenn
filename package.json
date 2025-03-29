@@ -1,5 +1,22 @@
 {
   "dependencies": {
     "zenn-cli": "^0.1.158"
+  },
+  "devDependencies": {
+    "editorconfig-checker": "^6.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "markdownlint": "^0.37.4",
+    "markdownlint-cli": "^0.44.0",
+    "prettier": "^3.5.3"
+  },
+  "scripts": {
+    "lint:md": "markdownlint \"**/*.md\" --ignore node_modules --config .config/.markdownlint.json",
+    "check:md": "prettier --check \"**/*.md\" --config .config/.prettierrc.json",
+    "lint:all": "npm run lint:md && npm run check:md",
+    "fix:md": "markdownlint --fix \"**/*.md\" --ignore node_modules --config .config/.markdownlint.json",
+    "format:md": "prettier --write \"**/*.md\" --config .config/.prettierrc.json",
+    "fix:all": "npm run format:md && npm run fix:md",
+    "prepare": "husky"
   }
 }

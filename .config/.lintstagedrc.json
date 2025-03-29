@@ -1,0 +1,6 @@
+{
+  "*.md": [
+    "prettier --write --config .config/.prettierrc.json",
+    "markdownlint --fix --config .config/.markdownlint.json"
+  ]
+}
