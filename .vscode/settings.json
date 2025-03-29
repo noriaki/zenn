@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.configPath": ".config/.prettierrc.json",
+  "markdownlint.configFile": ".config/.markdownlint.json",
+  "markdownlint.run": "onSave",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "always"
+  }
+}
